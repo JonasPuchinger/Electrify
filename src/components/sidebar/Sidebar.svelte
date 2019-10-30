@@ -1,0 +1,19 @@
+<script>
+    import Library from './Library.svelte';
+    import Playlists from './Playlists.svelte';
+</script>
+
+<style type="text/scss">
+	.sidebar {
+        grid-area: sidebar;
+        min-width: 150px;
+        background-color: #050306;
+        color: #cccccc;
+        padding: 0 1em;
+    }
+</style>
+
+<div class="sidebar">
+    <Library />
+    <Playlists />
+</div>
