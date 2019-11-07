@@ -4,14 +4,17 @@
 </script>
 
 <style type="text/scss">
-    .controls {
+    #controls {
+        grid-column: windowcontrols;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-around;
     }
 </style>
 
-<div class="controls">
+<div id="controls">
     <Icon data={minus}></Icon>
     <Icon data={square}></Icon>
     <Icon data={times}></Icon>

@@ -9,10 +9,13 @@
     .titlebar {
         grid-area: titlebar;
         background-color: #050306;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: [hamburger] minmax(150px, 10%) [search] minmax(200px, 40%) [profiledropdown] minmax(350px, 45%) [windowcontrols]  minmax(100px, 5%);
         align-items: center;
-        justify-content: space-between;
+        
+        > * {
+            box-sizing: content-box !important;
+        }
     }
 </style>
 

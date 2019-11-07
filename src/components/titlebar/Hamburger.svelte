@@ -15,11 +15,13 @@
 
 <style type="text/scss">
 	#hamburger {
+        grid-column: hamburger;
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: row;
         padding: 1em 0;
+        margin-left: 1em;
     }
 
     #hamburger:hover .dot {

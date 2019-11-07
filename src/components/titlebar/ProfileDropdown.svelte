@@ -4,6 +4,7 @@
 
 <style  type="text/scss">
     #profile-dropdown {
+        grid-column: profiledropdown;
         margin-right: 1em;
     }
 </style>
