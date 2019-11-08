@@ -24,6 +24,7 @@
     "start:dev": "sirv public --dev"
   },
   "dependencies": {
+    "spotify-web-api-js": "^1.2.0",
     "svelte-awesome": "^2.2.0"
   }
 }

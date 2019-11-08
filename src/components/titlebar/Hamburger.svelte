@@ -20,8 +20,7 @@
         height: auto;
         display: flex;
         flex-direction: row;
-        padding: 1em 0;
-        margin-left: 1em;
+        padding-left: 1em;
     }
 
     #hamburger:hover .dot {

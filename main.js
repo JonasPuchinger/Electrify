@@ -1,4 +1,8 @@
-const { app, BrowserWindow, screen } = require('electron');
+const { app, BrowserWindow } = require('electron');
+const electron = require('electron');
+
+// How to use Electron API in app instead of here
+// https://stackoverflow.com/questions/41819632/how-to-call-a-function-module-in-electron-from-my-webpage
 
 let mainWindow;
 
@@ -23,6 +27,7 @@ function createWindow (w, h) {
 }
 
 app.on('ready', () => {
+  const screen = electron.screen;
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
   createWindow(width, height);
 });

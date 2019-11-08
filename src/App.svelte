@@ -26,8 +26,8 @@
 		width: 100vw;
 		height: 100vh;
 		display: grid;
-		grid-template-columns: 10% 90%;
-  		grid-template-rows: 10% 82% 8%;
+		grid-template-columns: minmax(150px, 1fr) 9fr;
+  		grid-template-rows: 1fr 8.2fr 0.8fr;
 		grid-template-areas: 
 			"titlebar titlebar"
 			"sidebar main"

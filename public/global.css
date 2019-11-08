@@ -30,13 +30,3 @@ a:hover {
 label {
 	display: block;
 }
-
-button {
-	color: #ffffff;
-	background-color: #A91145;
-	outline: none;
-}
-
-button:hover {
-	transform: scale(1.2);
-}

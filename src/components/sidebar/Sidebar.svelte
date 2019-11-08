@@ -9,7 +9,7 @@
         min-width: 150px;
         background-color: #050306;
         color: #cccccc;
-        padding: 0 1em;
+        padding-left: 1em;
     }
 </style>
 

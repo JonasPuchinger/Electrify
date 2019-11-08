@@ -10,7 +10,7 @@
         grid-area: titlebar;
         background-color: #050306;
         display: grid;
-        grid-template-columns: [hamburger] minmax(150px, 10%) [search] minmax(200px, 40%) [profiledropdown] minmax(350px, 45%) [windowcontrols]  minmax(100px, 5%);
+        grid-template-columns: [hamburger] minmax(150px, 1fr) [search] minmax(200px, 4fr) [profiledropdown] minmax(350px, 4.5fr) [windowcontrols]  minmax(100px, 0.5fr);
         align-items: center;
         
         > * {
