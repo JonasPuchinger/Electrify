@@ -4,6 +4,7 @@
 
 	import Titlebar from './components/titlebar/Titlebar.svelte';
 	import Sidebar from './components/sidebar/Sidebar.svelte';
+	import Player from './components/player/Player.svelte';
 	import MainView from './components/main_view/Mainview.svelte';
 
 	let hamburger = null;
@@ -39,4 +40,5 @@
 	<Titlebar />
 	<Sidebar />
 	<MainView />
+	<Player />
 </div>

@@ -1,6 +1,6 @@
 <script>
     import Icon from 'svelte-awesome';
-    import { square, times, minus } from 'svelte-awesome/icons';
+    import { windowMinimize, windowMaximize, times } from 'svelte-awesome/icons';
 </script>
 
 <style type="text/scss">
@@ -15,7 +15,7 @@
 </style>
 
 <div id="controls">
-    <Icon data={minus}></Icon>
-    <Icon data={square}></Icon>
-    <Icon data={times}></Icon>
+    <Icon data={windowMinimize} />
+    <Icon data={windowMaximize} />
+    <Icon data={times} />
 </div>

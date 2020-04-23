@@ -22,13 +22,19 @@
                 transform: scale(1.1);
             }
         }
+
+        .profile-picture {
+            border-radius: 5em;
+            margin-bottom: 0.5em;
+        }
     }
 </style>
 
 <div class="main-view">
+    <img src="./icon.png" alt="Electrify Logo">
     <h1>Electrify</h1>
     {#if $userLoggedIn}
-        <img src="" alt="Profile Picture">
+        <img class="profile-picture" src="https://via.placeholder.com/50x50?text=Profile+Picture" alt="Profile Picture">
         <span>Welcome back, Username</span>
     {:else}
         <button>Log in</button>

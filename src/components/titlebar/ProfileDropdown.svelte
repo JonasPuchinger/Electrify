@@ -8,12 +8,18 @@
         padding-right: 2em;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
+
+        .profile-picture {
+            border-radius: 5em;
+            margin-right: 0.5em;
+        }
     }
 </style>
 
 <div id="profile-dropdown">
     {#if $userLoggedIn}
-        <img src="" alt="Profile Picture">
+        <img class="profile-picture" src="https://via.placeholder.com/20x20?text=Profile+Picture" alt="Profile Picture">
         <span>Username</span>
     {:else}
         <p>Not logged in</p>   

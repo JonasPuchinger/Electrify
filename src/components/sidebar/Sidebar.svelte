@@ -1,6 +1,7 @@
 <script>
     import Library from './Library.svelte';
     import Playlists from './Playlists.svelte';
+    import { userLoggedIn } from '../../stores.js';
 </script>
 
 <style type="text/scss">
@@ -14,6 +15,8 @@
 </style>
 
 <div class="sidebar">
-    <Library />
-    <Playlists />
+    {#if $userLoggedIn}
+        <Library />
+        <Playlists />
+    {/if}
 </div>
