@@ -1,15 +1,6 @@
 <script>
-    import { userLoggedIn } from '../../stores.js';
-    import { login, logUserInfo } from '../../api/spotify.js';
-
-    function loginUser() {
-        login();
-        userLoggedIn.set(true);
-    }
-    
-    function logoutUser() {
-        logUserInfo();
-    }
+    import { userLoggedIn, userInfo } from '../../stores.js';
+    import { login } from '../../api/spotify.js';
 </script>
 
 <style type="text/scss">
@@ -34,6 +25,8 @@
         }
 
         .profile-picture {
+            width: 100px;
+            height: 100px;
             border-radius: 5em;
             margin-bottom: 0.5em;
         }
@@ -41,13 +34,12 @@
 </style>
 
 <div class="main-view">
-    <img src="./icon.png" alt="Electrify Logo">
-    <h1>Electrify</h1>
     {#if $userLoggedIn}
-        <img class="profile-picture" src="https://via.placeholder.com/50x50?text=Profile+Picture" alt="Profile Picture">
-        <span>Welcome back, Username</span>
-        <button on:click={logoutUser}>Log out</button>
+        <img class="profile-picture" src={$userInfo.images[0].url} alt="Profile Picture">
+        <span>Welcome back, {$userInfo.display_name}!</span>
     {:else}
-        <button on:click={loginUser}>Log in</button>
+        <img src="./icon.png" alt="Electrify Logo">
+        <h1>Electrify</h1>
+        <button on:click={login}>Log in</button>
     {/if}
 </div>

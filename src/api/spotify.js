@@ -1,6 +1,8 @@
 import SpotifyWebApi from 'spotify-web-api-js';
 import { creds } from './credentials';
 import { loginScopes } from './scopes'; 
+import { userInfo } from '../stores';
+import { get } from 'svelte/store';
 
 const spotifyApi = new SpotifyWebApi();
 
@@ -20,7 +22,7 @@ export function login() {
         
     window.open(loginURL,
         'Spotify',
-        `menubar=yes,location=yes,resizable=yes,scrollbars=no,status=yes, width=${width}, height=${height}, top=${top}, left=${left}`
+        `menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=${width}, height=${height}, top=${top}, left=${left}`
     );
 }
 
@@ -30,17 +32,12 @@ function setAccessToken(token) {
 }
 
 function getUserInfo() {
-    spotifyApi.getMe((error, data) => {
-        if(error) {
-            return
+    spotifyApi.getMe((err, data) => {
+        if (err) {
+            console.error(err);
         }
         if (data) {
-            logUserInfo(data);
+            userInfo.set(data);
         }
     });
-}
-
-export function logUserInfo(data) {
-    console.log(spotifyApi.getAccessToken());
-    console.log(data);
 }

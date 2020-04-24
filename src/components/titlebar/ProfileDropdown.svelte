@@ -1,5 +1,5 @@
 <script>
-    import { userLoggedIn } from '../../stores.js';
+    import { userLoggedIn, userInfo } from '../../stores.js';
 </script>
 
 <style  type="text/scss">
@@ -11,6 +11,8 @@
         align-items: center;
 
         .profile-picture {
+            width: 30px;
+            height: 30px;
             border-radius: 5em;
             margin-right: 0.5em;
         }
@@ -19,8 +21,8 @@
 
 <div id="profile-dropdown">
     {#if $userLoggedIn}
-        <img class="profile-picture" src="https://via.placeholder.com/20x20?text=Profile+Picture" alt="Profile Picture">
-        <span>Username</span>
+        <img class="profile-picture" src={$userInfo.images[0].url} alt="Profile Picture">
+        <span>{$userInfo.display_name}</span>
     {:else}
         <p>Not logged in</p>   
     {/if}
