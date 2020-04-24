@@ -56,4 +56,12 @@
     }
 </style>
 
-<input type="range" bind:this={inputEl} min={min} max={max} step={step} bind:value={value} on:mousemove={setProgress} on:input={setProgress}>
+<input type="range" 
+    bind:this={inputEl}
+    min={min}
+    max={max}
+    step={step}
+    bind:value={value}
+    on:mousemove={setProgress}
+    on:input={setProgress}
+>
