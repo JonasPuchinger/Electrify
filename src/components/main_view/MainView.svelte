@@ -1,5 +1,15 @@
 <script>
     import { userLoggedIn } from '../../stores.js';
+    import { login, logUserInfo } from '../../api/spotify.js';
+
+    function loginUser() {
+        login();
+        userLoggedIn.set(true);
+    }
+    
+    function logoutUser() {
+        logUserInfo();
+    }
 </script>
 
 <style type="text/scss">
@@ -36,7 +46,8 @@
     {#if $userLoggedIn}
         <img class="profile-picture" src="https://via.placeholder.com/50x50?text=Profile+Picture" alt="Profile Picture">
         <span>Welcome back, Username</span>
+        <button on:click={logoutUser}>Log out</button>
     {:else}
-        <button>Log in</button>
+        <button on:click={loginUser}>Log in</button>
     {/if}
 </div>

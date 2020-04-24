@@ -1,3 +1,4 @@
-export default loginScopes = [
-    'user-read-email'
+export const loginScopes = [
+    'user-read-email',
+    'user-read-private'
 ]
