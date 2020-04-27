@@ -14,7 +14,7 @@ function createWindow (w, h) {
     icon: 'public/icon.png',
     minWidth: w,
     minHeight: h,
-    // frame: false
+    frame: false
   });
 
   mainWindow.loadFile('public/index.html');

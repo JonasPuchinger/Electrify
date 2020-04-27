@@ -21,19 +21,19 @@
         display: flex;
         flex-direction: row;
         padding-left: 1em;
-    }
 
-    #hamburger:hover .dot {
-        background-color: #ffffff;
-    }
+        &:hover .dot {
+            background-color: #ffffff;
+        }
 
-    .dot {
-        width: 0.3rem;
-        height: 0.3rem;
-        background-color: #cccccc;
-        display: block;
-        border-radius: 50%;
-        margin: 0.2em;
+        .dot {
+            width: 0.3rem;
+            height: 0.3rem;
+            background-color: #cccccc;
+            display: block;
+            border-radius: 50%;
+            margin: 0.2em;
+        }
     }
 
     #hamburger-menu {
@@ -46,15 +46,15 @@
         padding: 1em;
         z-index: 10;
         border: 1px solid #cccccc;
-    }
 
-    .menu-entry {
-        width: 100%;
-    }
+        .menu-entry {
+            width: 100%;
 
-    #hamburger-menu .menu-entry:hover {
-        color: #ffffff;
-        cursor: default;
+            &:hover {
+                color: #ffffff;
+                cursor: default;
+            }
+        }
     }
 
     .white-bg {

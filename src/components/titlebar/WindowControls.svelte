@@ -1,6 +1,19 @@
 <script>
+    const { remote } = require('electron');
     import Icon from 'svelte-awesome';
     import { windowMinimize, windowMaximize, times } from 'svelte-awesome/icons';
+
+    function onMinimize() {
+        remote.BrowserWindow.getFocusedWindow().minimize();
+    }
+    
+    function onMaximize() {
+        remote.BrowserWindow.getFocusedWindow().maximize();
+    }
+    
+    function onClose() {
+        remote.BrowserWindow.getFocusedWindow().close();
+    }
 </script>
 
 <style type="text/scss">
@@ -11,11 +24,19 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+
+        .control {
+            padding: 0.5em;
+
+            &:hover {
+                background: #181A1B;
+            }
+        }
     }
 </style>
 
 <div id="controls">
-    <Icon data={windowMinimize} />
-    <Icon data={windowMaximize} />
-    <Icon data={times} />
+    <div class="control" on:click={onMinimize}><Icon data={windowMinimize} /></div>
+    <div class="control" on:click={onMaximize}><Icon data={windowMaximize} /></div>
+    <div class="control" on:click={onClose}><Icon data={times} /></div>
 </div>
